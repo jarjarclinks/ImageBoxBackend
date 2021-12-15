@@ -8,23 +8,7 @@ const logger = require('./utils/logger')
 app.use(express.json())
 const mongoose = require('mongoose')
 const postsRouter = require('./controllers/posts')
-
-// let memes = [
-//     {
-//         picture : "https://i.pinimg.com/originals/0e/8b/7d/0e8b7d2c53195177a326670609fcb7ea.jpg",
-//         caption : "No bad spidermen memes please",
-//      //   id: 0
-//     },
-//     {
-//         picture : "https://i.pinimg.com/originals/0e/8b/7d/0e8b7d2c53195177a326670609fcb7ea.jpg",
-//         caption : "No good spidermen memes please",
-//       //  id: 1
-//     }
-
-
-// ]
-
-
+app.use(express.static('build'))
 
 const url = process.env.MONGODB_URI
 console.log('connecting to ', url)  
