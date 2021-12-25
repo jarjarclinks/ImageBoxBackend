@@ -29,7 +29,7 @@ app.use(middleware.unknownEndpoint)
 
 app.use(middleware.errorHandler)
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>
 {
   
