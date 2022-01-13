@@ -16,13 +16,6 @@ postsRouter.get('/',(request,response)=>
 
 postsRouter.post('/', (request,response)=>
 {
-    
-   // let maxid = memes.length>0
-              //  ?Math.max(...memes.map(n=>n.id))
-              //  :0
-
-    //meme.id = maxid + 1
-    //console.log(request)
     const newPost = new Post(request.body)
   
     newPost.save().then(result=>{
